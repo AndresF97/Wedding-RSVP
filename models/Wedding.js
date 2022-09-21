@@ -19,6 +19,14 @@ Wedding.init(
                 len:[2,10]
             }
         },
+        guest_list:{
+            type:DataTypes.INTEGER,
+            allowNull:false,
+            validate:{
+                min:10,
+                max:40
+            }
+        },
         dish_id:{
             type:DataTypes.INTEGER,
             allowNull: false,
