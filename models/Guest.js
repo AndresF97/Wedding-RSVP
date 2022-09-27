@@ -12,7 +12,7 @@ Guest.init(
             primaryKey: true,
             autoIncrement:true
         },
-        RSVP:{
+        rsvp:{
             type:DataTypes.BOOLEAN,
             allowNull:false,
         },

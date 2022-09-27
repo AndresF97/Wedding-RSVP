@@ -30,5 +30,7 @@ const weddingData = [
     }
 ]
 
-const seedWedding = () => Wedding.bulkCreate(weddingData);
+const seedWedding = () => Wedding.bulkCreate(weddingData,   { individualHooks: true,
+    returning: true,
+});
 module.exports = seedWedding
