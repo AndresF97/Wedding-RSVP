@@ -1,7 +1,7 @@
 const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection')
 
-class Guest extends Models{}
+class Guest extends Model{}
 
 
 Guest.init(
@@ -19,6 +19,14 @@ Guest.init(
         bring_kids:{
             type:DataTypes.BOOLEAN,
             allowNull:false,
+        },
+        user_id:{
+            type:DataTypes.INTEGER,
+            allowNull:false,
+            references:{
+                model:'user',
+                key:'id'
+            }
         },
         wedding_event:{
             type:DataTypes.INTEGER,

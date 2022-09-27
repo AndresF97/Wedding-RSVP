@@ -2,7 +2,7 @@ const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
 
-class Wedding extends Models{}
+class Wedding extends Model{}
 
 Wedding.init(
     {
@@ -25,6 +25,10 @@ Wedding.init(
             validate:{
                 min:10,
                 max:40
+            },
+            references:{
+                model:'guest',
+                key:'id'
             }
         },
         dish_id:{
