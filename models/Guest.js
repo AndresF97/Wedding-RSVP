@@ -20,19 +20,17 @@ Guest.init(
             type:DataTypes.BOOLEAN,
             allowNull:false,
         },
+        wedding_id:{
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'wedding',
+              key: 'id',
+            },
+        },
         user_id:{
             type:DataTypes.INTEGER,
-            allowNull:false,
             references:{
                 model:'user',
-                key:'id'
-            }
-        },
-        wedding_event:{
-            type:DataTypes.INTEGER,
-            allowNull:false,
-            references:{
-                model:'wedding',
                 key:'id'
             }
         }

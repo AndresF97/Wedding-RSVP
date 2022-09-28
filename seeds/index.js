@@ -9,12 +9,12 @@ const seedAll = async() =>{
     // console.log('\n----- DATABASE SYNCED -----\n');
     await userSeed();
     console.log('\n----- USER SEEDED -----\n');
-    // await guestSeed();
-    // console.log('\n----- GUEST SEEDED -----\n');
     await dishSeed()
     console.log('\n----- DISH SEEDED -----\n');
-    // await weddingSeed();
-    // console.log('\n----- WEEDING SEEDED -----\n');
+    await guestSeed();
+    console.log('\n----- GUEST SEEDED -----\n');
+    await weddingSeed();
+    console.log('\n----- WEEDING SEEDED -----\n');
     process.exit(0);
 }
 

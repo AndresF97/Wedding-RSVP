@@ -9,8 +9,8 @@ Wedding.init(
         id:{
             type:DataTypes.INTEGER,
             allowNull:false,
+            primaryKey:true,
             autoIncrement:true,
-            primaryKey:true
         },
         name:{
             type:DataTypes.STRING,
@@ -19,21 +19,15 @@ Wedding.init(
                 len:[2,10]
             }
         },
-        guest_list:{
-            type:DataTypes.INTEGER,
-            allowNull:false,
-            validate:{
-                min:10,
-                max:40
-            },
-            references:{
-                model:'guest',
-                key:'id'
-            }
-        },
+        // guest_list:{
+        //     type:DataTypes.INTEGER,
+        //     references:{
+        //         model:'guest',
+        //         key:'id'
+        //     }
+        // },
         dish_id:{
             type:DataTypes.INTEGER,
-            allowNull: false,
             references:{
                 model:'dish',
                 key:'id'
@@ -41,7 +35,6 @@ Wedding.init(
         },
         user_id:{
             type:DataTypes.INTEGER,
-            allowNull:false,
             references:{
                 model:'user',
                 key:'id'

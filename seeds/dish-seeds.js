@@ -15,8 +15,6 @@ const dishData = [
     }
 ]
 
-const seedDish = ()=> Dish.bulkCreate(dishData,   { individualHooks: true,
-    returning: true,
-});
+const seedDish = ()=> Dish.bulkCreate(dishData);
 
 module.exports = seedDish;
