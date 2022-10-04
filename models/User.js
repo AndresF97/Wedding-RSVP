@@ -11,10 +11,10 @@ class User extends Model{
 User.init(
     {
         id:{
-            type:DataTypes.INTEGER,
-            allowNull:false,
-            primaryKey:true,
-            autoIncrement:true
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
         },
         name:{
             type:DataTypes.STRING,
@@ -25,6 +25,13 @@ User.init(
             allowNull:false,
             validate:{
                 isEmail:true
+            }
+        }, 
+        password:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            validate:{
+                len:[8]
             }
         },
         is_guest:{
@@ -42,7 +49,7 @@ User.init(
         timestamps:false,
         freezeTableName:true,
         underscored:true,
-        modelName:'User'
+        modelName:'user'
     }
 );
 
