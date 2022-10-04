@@ -8,7 +8,6 @@ Wedding.belongsTo(User,{
     onDelete:'CASCADE'
 })
 
-
 Wedding.hasMany(User,{
     foreignKey:'user_id',
     onDelete:"CASACADE"
